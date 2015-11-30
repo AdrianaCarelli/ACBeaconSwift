@@ -143,11 +143,11 @@ class HomeViewController: UIViewController, CLLocationManagerDelegate {
 
     func locationManager(manager: CLLocationManager, didDetermineState state: CLRegionState, forRegion region: CLRegion){
         if (state == .Inside) {
-           sendLocalNotificationWithMessage("Sei dentro la regione", playSound: true)
+           sendLocalNotificationWithMessage("you're in the region", playSound: true)
         }else if(state == .Outside){
-            sendLocalNotificationWithMessage("Sei uscito dalla regione", playSound: true)
+            sendLocalNotificationWithMessage("you is out of the region", playSound: true)
         }else if(state == .Unknown){
-            sendLocalNotificationWithMessage("Regione sconosciuta", playSound: true)
+            sendLocalNotificationWithMessage("unknown region", playSound: true)
         }
     }
 
